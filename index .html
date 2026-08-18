@@ -405,7 +405,8 @@
       <p>Illustrative starting ranges — your exact quote depends on the clinical assessment at your first visit.</p>
     </div>
     <div class="pricing-grid">
-      <div class="price-card">
+      <div class="price-card" data-plan="preventive">
+        <span class="price-badge" style="display:none;">Most requested</span>
         <h3>Preventive & general</h3>
         <div class="price-range">₹500 – ₹3,000</div>
         <div class="price-note">Per visit, most common procedures</div>
@@ -415,8 +416,8 @@
           <li>Tooth-colored filling</li>
         </ul>
       </div>
-      <div class="price-card featured">
-        <span class="price-badge">Most requested</span>
+      <div class="price-card" data-plan="cosmetic">
+        <span class="price-badge" style="display:none;">Most requested</span>
         <h3>Cosmetic & aligners</h3>
         <div class="price-range">₹8,000 – ₹90,000</div>
         <div class="price-note">Whitening through full aligner treatment</div>
@@ -426,7 +427,8 @@
           <li>Clear aligner course</li>
         </ul>
       </div>
-      <div class="price-card">
+      <div class="price-card" data-plan="implants">
+        <span class="price-badge" style="display:none;">Most requested</span>
         <h3>Implants & surgery</h3>
         <div class="price-range">₹25,000 – ₹45,000</div>
         <div class="price-note">Per implant, including crown</div>
@@ -439,6 +441,19 @@
     </div>
   </div>
 </section>
+
+<script>
+  // Change this value to move the "Most requested" highlight to a different pricing card.
+  // Options: 'preventive', 'cosmetic', 'implants'
+  var FEATURED_PLAN = 'cosmetic';
+  document.querySelectorAll('.price-card').forEach(function(card){
+    if(card.getAttribute('data-plan') === FEATURED_PLAN){
+      card.classList.add('featured');
+      var badge = card.querySelector('.price-badge');
+      if(badge) badge.style.display = 'inline-flex';
+    }
+  });
+</script>
 
 <section id="testimonials" class="testimonials">
   <div class="wrap">
