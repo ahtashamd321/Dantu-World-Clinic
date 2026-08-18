@@ -70,6 +70,7 @@
   .service-card{background:#fff; border:1px solid var(--line); border-radius:var(--radius); padding:28px 22px; transition:transform .18s ease, box-shadow .18s ease;}
   .service-card:hover{transform:translateY(-4px); box-shadow:0 16px 32px -20px rgba(15,76,76,.35);}
   .service-icon{width:46px; height:46px; border-radius:12px; background:var(--ivory-2); display:flex; align-items:center; justify-content:center; margin-bottom:18px;}
+  .service-emoji{font-size:22px; line-height:1;}
   .service-card h3{font-size:17px; margin-bottom:8px;}
   .service-card p{font-size:14px; color:var(--charcoal-soft);}
 
@@ -87,7 +88,8 @@
   .cred{display:flex; align-items:center; gap:10px; font-size:14px; font-weight:600; color:var(--teal-900);}
 
   .pricing-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:22px;}
-  .price-card{background:#fff; border:1px solid var(--line); border-radius:var(--radius); padding:32px 26px;}
+  .price-card{background:#fff; border:1px solid var(--line); border-radius:var(--radius); padding:32px 26px; cursor:pointer; transition:border-color .15s ease, box-shadow .15s ease;}
+  .price-card:hover{box-shadow:0 12px 28px -18px rgba(15,76,76,.3);}
   .price-card.featured{border:2px solid var(--coral); position:relative;}
   .price-badge{position:absolute; top:-13px; left:26px; background:var(--coral); color:#fff; font-size:11.5px; font-weight:600; padding:5px 14px; border-radius:999px; letter-spacing:0.03em;}
   .price-card h3{font-size:19px; margin-bottom:6px;}
@@ -308,42 +310,42 @@
     </div>
     <div class="services-grid">
       <div class="service-card">
-        <div class="service-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0F4C4C" stroke-width="1.8"><path d="M12 21s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.5-7 10-7 10z"/></svg></div>
+        <div class="service-icon"><span class="service-emoji">🦷</span></div>
         <h3>General dentistry</h3>
         <p>Checkups, cleanings, fillings and preventive care for the whole family.</p>
       </div>
       <div class="service-card">
-        <div class="service-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0F4C4C" stroke-width="1.8"><path d="M9 3l1 4M15 3l-1 4M6 21c0-6 2-9 6-9s6 3 6 9"/></svg></div>
+        <div class="service-icon"><span class="service-emoji">✨</span></div>
         <h3>Cosmetic dentistry</h3>
         <p>Whitening, veneers and full smile makeovers, planned around your face and goals.</p>
       </div>
       <div class="service-card">
-        <div class="service-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0F4C4C" stroke-width="1.8"><rect x="4" y="9" width="16" height="6" rx="3"/></svg></div>
+        <div class="service-icon"><span class="service-emoji">😬</span></div>
         <h3>Orthodontics</h3>
         <p>Metal braces and clear aligners for children, teens and adults.</p>
       </div>
       <div class="service-card">
-        <div class="service-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0F4C4C" stroke-width="1.8"><path d="M12 2v8M8 8l4 2 4-2M6 22c0-6 2-9 6-9s6 3 6 9"/></svg></div>
+        <div class="service-icon"><span class="service-emoji">🔩</span></div>
         <h3>Dental implants</h3>
         <p>Permanent, natural-feeling tooth replacement using precision-guided placement.</p>
       </div>
       <div class="service-card">
-        <div class="service-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0F4C4C" stroke-width="1.8"><path d="M12 2v20M6 8l6-4 6 4"/></svg></div>
+        <div class="service-icon"><span class="service-emoji">💉</span></div>
         <h3>Root canal treatment</h3>
         <p>Pain-focused endodontic care with single-visit options where possible.</p>
       </div>
       <div class="service-card">
-        <div class="service-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0F4C4C" stroke-width="1.8"><circle cx="12" cy="8" r="4"/><path d="M6 21c0-4 3-6 6-6s6 2 6 6"/></svg></div>
+        <div class="service-icon"><span class="service-emoji">🧒</span></div>
         <h3>Pediatric dentistry</h3>
         <p>Gentle, anxiety-aware dental care built specifically for children.</p>
       </div>
       <div class="service-card">
-        <div class="service-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0F4C4C" stroke-width="1.8"><path d="M4 12h16M4 6h10M4 18h7"/></svg></div>
+        <div class="service-icon"><span class="service-emoji">🩺</span></div>
         <h3>Oral surgery</h3>
         <p>Extractions and minor surgical procedures with modern sedation options.</p>
       </div>
       <div class="service-card">
-        <div class="service-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0F4C4C" stroke-width="1.8"><path d="M4 20l4-10 4 6 3-4 5 8H4z"/></svg></div>
+        <div class="service-icon"><span class="service-emoji">🪄</span></div>
         <h3>Full mouth rehabilitation</h3>
         <p>Comprehensive restoration plans for complex, long-neglected dental cases.</p>
       </div>
@@ -405,8 +407,7 @@
       <p>Illustrative starting ranges — your exact quote depends on the clinical assessment at your first visit.</p>
     </div>
     <div class="pricing-grid">
-      <div class="price-card" data-plan="preventive">
-        <span class="price-badge" style="display:none;">Most requested</span>
+      <div class="price-card" data-plan="preventive" onclick="selectPricingPlan('preventive')">
         <h3>Preventive & general</h3>
         <div class="price-range">₹500 – ₹3,000</div>
         <div class="price-note">Per visit, most common procedures</div>
@@ -416,8 +417,8 @@
           <li>Tooth-colored filling</li>
         </ul>
       </div>
-      <div class="price-card" data-plan="cosmetic">
-        <span class="price-badge" style="display:none;">Most requested</span>
+      <div class="price-card" data-plan="cosmetic" onclick="selectPricingPlan('cosmetic')">
+        <span class="price-badge">Most requested</span>
         <h3>Cosmetic & aligners</h3>
         <div class="price-range">₹8,000 – ₹90,000</div>
         <div class="price-note">Whitening through full aligner treatment</div>
@@ -427,8 +428,7 @@
           <li>Clear aligner course</li>
         </ul>
       </div>
-      <div class="price-card" data-plan="implants">
-        <span class="price-badge" style="display:none;">Most requested</span>
+      <div class="price-card" data-plan="implants" onclick="selectPricingPlan('implants')">
         <h3>Implants & surgery</h3>
         <div class="price-range">₹25,000 – ₹45,000</div>
         <div class="price-note">Per implant, including crown</div>
@@ -443,16 +443,18 @@
 </section>
 
 <script>
-  // Change this value to move the "Most requested" highlight to a different pricing card.
-  // Options: 'preventive', 'cosmetic', 'implants'
-  var FEATURED_PLAN = 'cosmetic';
-  document.querySelectorAll('.price-card').forEach(function(card){
-    if(card.getAttribute('data-plan') === FEATURED_PLAN){
-      card.classList.add('featured');
-      var badge = card.querySelector('.price-badge');
-      if(badge) badge.style.display = 'inline-flex';
-    }
-  });
+  function selectPricingPlan(plan){
+    document.querySelectorAll('.price-card').forEach(function(card){
+      if(card.getAttribute('data-plan') === plan){
+        card.classList.add('featured');
+      } else {
+        card.classList.remove('featured');
+      }
+    });
+  }
+  // Default highlighted card on page load. Click any card to move the border highlight to it.
+  // The "Most requested" badge always stays on the Cosmetic & aligners card.
+  selectPricingPlan('cosmetic');
 </script>
 
 <section id="testimonials" class="testimonials">
